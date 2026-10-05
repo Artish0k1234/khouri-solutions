@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Enterprise Security & Threat Protection Headers -->
+    <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains; preload">
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self' https://cdn.tailwindcss.com https://unpkg.com https://fonts.googleapis.com https://fonts.gstatic.com data:; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com https://unpkg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://unpkg.com; media-src 'self';">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+
+    <title>Khouri Solutions Inc. | Corporate Overview</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <!-- External Stylesheet -->
+    <link rel="stylesheet" href="index.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        corporate: {
+                            charcoal: '#1A222B',
+                            gold: '#C5A059',
+                            lightgray: '#F4F4F4',
+                            mutedslate: '#26303B'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['Cinzel', 'serif'],
+                        sans: ['Plus Jakarta Sans', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body
+    class="bg-corporate-lightgray text-corporate-charcoal font-sans antialiased selection:bg-corporate-gold selection:text-corporate-charcoal overflow-x-hidden">
+
+    <!-- Responsive Navigation Bar with Language Switcher -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-[#1A222B]/95 backdrop-blur-md border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
+            <a href="#home" class="flex items-center space-x-3 hover-pop">
+                <span class="font-serif text-xl sm:text-2xl tracking-widest text-corporate-gold font-bold">KS</span>
+                <span
+                    class="text-[10px] sm:text-xs uppercase tracking-widest text-slate-300 border-l border-slate-700 pl-3 hidden xs:inline-block">Khouri
+                    Solutions Inc.</span>
+            </a>
+
+            <nav class="hidden md:flex space-x-6 lg:space-x-8 text-sm font-medium tracking-wide">
+                <a href="#home" class="text-corporate-gold transition-colors hover:text-white"
+                    data-i18n="nav_home">Home</a>
+                <a href="#problem" class="text-slate-300 hover:text-corporate-gold transition-colors"
+                    data-i18n="nav_overview">Overview</a>
+                <a href="#divisions" class="text-slate-300 hover:text-corporate-gold transition-colors"
+                    data-i18n="nav_divisions">Divisions</a>
+                <a href="#portfolio" class="text-slate-300 hover:text-corporate-gold transition-colors"
+                    data-i18n="nav_portfolio">Portfolio</a>
+                <a href="#why-us" class="text-slate-300 hover:text-corporate-gold transition-colors"
+                    data-i18n="nav_why_us">Why Us</a>
+                <a href="#contact" class="text-slate-300 hover:text-corporate-gold transition-colors"
+                    data-i18n="nav_contact">Contact</a>
+            </nav>
+
+            <div class="flex items-center space-x-4">
+                <!-- Language Selector Dropdown -->
+                <select id="lang-switcher"
+                    class="bg-slate-800 text-corporate-gold border border-slate-700 text-xs px-2.5 py-1.5 rounded focus:outline-none focus:border-corporate-gold transition-colors cursor-pointer">
+                    <option value="en">English</option>
+                    <option value="fr">Français</option>
+                </select>
+
+                <a href="#contact"
+                    class="hidden sm:inline-block px-4 py-2 text-[11px] uppercase tracking-widest font-semibold border border-corporate-gold text-corporate-gold hover:bg-corporate-gold hover:text-corporate-charcoal transition-all duration-300 hover-pop"
+                    data-i18n="nav_cta">
+                    Partner With Us
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- SECTION 1: HERO -->
+    <section id="hero-section"
+        class="relative pt-32 pb-20 md:pt-44 md:py-32 bg-corporate-charcoal text-corporate-lightgray min-h-[95vh] flex items-center justify-center overflow-hidden">
+        <video id="hero-video" autoplay muted playsinline class="absolute inset-0 w-full h-full object-cover z-0">
+            <source src="khouri-solutions.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <div id="hero-bg-solid" class="absolute inset-0 bg-[#1A222B] z-10"></div>
+
+        <div id="hero-text-overlay" class="relative z-20 max-w-4xl mx-auto px-6 text-center w-full">
+            <div class="mb-4 flex justify-center">
+                <div
+                    class="font-serif text-5xl sm:text-6xl font-bold tracking-widest gold-gradient-text drop-shadow-md hover-pop cursor-default">
+                    KS
+                </div>
+            </div>
+
+            <span class="text-[10px] sm:text-xs font-semibold uppercase tracking-[0.3em] text-corporate-gold mb-3 block"
+                data-i18n="hero_subtitle">A Property Partner Business Providing Integrated Solutions</span>
+            <h1 class="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-4 leading-tight text-corporate-lightgray"
+                data-i18n="hero_title">
+                Building a Community Where Everyone Feels at Home
+            </h1>
+            <p class="text-sm sm:text-base lg:text-lg text-slate-300 max-w-2xl mx-auto mb-8 font-light"
+                data-i18n="hero_desc">
+                We are not just another property management company. We are your integrated growth partner. Building
+                Value. Creating Growth. Delivering Results.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#divisions" class="btn-primary" data-i18n="hero_btn1">Explore Our Divisions</a>
+                <a href="#contact" class="btn-outline" data-i18n="hero_btn2">Get in Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SPOT 1: 4 AI-GENERATED BANNERS CAROUSEL -->
+    <section class="py-20 bg-corporate-charcoal border-t border-slate-800 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 mb-12 text-center">
+            <span class="text-xs font-semibold uppercase tracking-[0.2em] text-corporate-gold mb-2 block"
+                data-i18n="framework_tag">Strategic Framework</span>
+            <h2 class="font-serif text-3xl sm:text-4xl font-semibold hover-pop cursor-default inline-block"
+                data-i18n="framework_title">Integrated Capabilities</h2>
+            <p class="text-slate-400 text-sm mt-2" data-i18n="framework_desc">Auto-scrolling showcase (6-second
+                intervals). Use arrows, dots, or your Left/Right Keyboard Arrows to navigate.</p>
+        </div>
+
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 relative" id="carousel-container" tabindex="0">
+            <div
+                class="relative overflow-hidden rounded-xl border border-slate-700 shadow-2xl bg-[#151C24] h-[280px] sm:h-[420px] md:h-[480px]">
+                <div
+                    class="carousel-slide absolute inset-0 transition-opacity duration-700 opacity-100 flex items-center justify-center">
+                    <img src="vision-to-value.png" alt="From Vision to Value"
+                        class="w-full h-full object-contain sm:object-cover">
+                </div>
+                <div
+                    class="carousel-slide absolute inset-0 transition-opacity duration-700 opacity-0 flex items-center justify-center">
+                    <img src="strategy.png" alt="Strategy for What's Next"
+                        class="w-full h-full object-contain sm:object-cover">
+                </div>
+                <div
+                    class="carousel-slide absolute inset-0 transition-opacity duration-700 opacity-0 flex items-center justify-center">
+                    <img src="bookkeeping.png" alt="Bookkeeping Services"
+                        class="w-full h-full object-contain sm:object-cover">
+                </div>
+                <div
+                    class="carousel-slide absolute inset-0 transition-opacity duration-700 opacity-0 flex items-center justify-center">
+                    <img src="property-management.png" alt="Property Management"
+                        class="w-full h-full object-contain sm:object-cover">
+                </div>
+            </div>
+
+            <div class="flex items-center justify-between mt-6 px-2">
+                <button id="prev-btn"
+                    class="p-3 bg-slate-800 hover:bg-corporate-gold hover:text-corporate-charcoal text-corporate-gold border border-slate-700 rounded-full transition-all shadow-md hover-pop">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                    </svg>
+                </button>
+                <div class="flex space-x-3 items-center" id="dots-container">
+                    <button class="dot-btn w-3.5 h-3.5 rounded-full bg-corporate-gold transition-all hover-pop"
+                        data-index="0"></button>
+                    <button
+                        class="dot-btn w-3.5 h-3.5 rounded-full bg-slate-700 hover:bg-slate-500 transition-all hover-pop"
+                        data-index="1"></button>
+                    <button
+                        class="dot-btn w-3.5 h-3.5 rounded-full bg-slate-700 hover:bg-slate-500 transition-all hover-pop"
+                        data-index="2"></button>
+                    <button
+                        class="dot-btn w-3.5 h-3.5 rounded-full bg-slate-700 hover:bg-slate-500 transition-all hover-pop"
+                        data-index="3"></button>
+                </div>
+                <button id="next-btn"
+                    class="p-3 bg-slate-800 hover:bg-corporate-gold hover:text-corporate-charcoal text-corporate-gold border border-slate-700 rounded-full transition-all shadow-md hover-pop">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2: THE PROBLEM TODAY -->
+    <section id="problem" class="py-20 sm:py-24 bg-corporate-lightgray border-t border-slate-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16" data-aos="fade-up">
+                <span class="text-xs font-semibold uppercase tracking-[0.2em] text-corporate-gold mb-3 block"
+                    data-i18n="prob_tag">Market Friction</span>
+                <h2 class="font-serif text-2xl sm:text-4xl font-semibold mb-4 text-corporate-charcoal hover-pop cursor-default inline-block"
+                    data-i18n="prob_title">The Problem Today</h2>
+                <p class="text-slate-600 text-base sm:text-lg" data-i18n="prob_subtitle">Reactive management leaves you
+                    managing blind.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 mb-12 sm:mb-16">
+                <div class="p-6 sm:p-8 bg-white border border-slate-200 shadow-sm relative group hover:border-corporate-gold hover-pop"
+                    data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-corporate-gold font-serif text-xl sm:text-2xl mb-3">01</div>
+                    <h3 class="font-semibold text-base sm:text-lg mb-2 text-corporate-charcoal"
+                        data-i18n="prob_1_title">Lagging Data</h3>
+                    <p class="text-slate-600 text-xs sm:text-sm leading-relaxed" data-i18n="prob_1_desc">Property
+                        management companies today are reactive, and provide lagging data managing your business
+                        impersonally.</p>
+                </div>
+                <div class="p-6 sm:p-8 bg-white border border-slate-200 shadow-sm relative group hover:border-corporate-gold hover-pop"
+                    data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-corporate-gold font-serif text-xl sm:text-2xl mb-3">02</div>
+                    <h3 class="font-semibold text-base sm:text-lg mb-2 text-corporate-charcoal"
+                        data-i18n="prob_2_title">Fragmented Information</h3>
+                    <p class="text-slate-600 text-xs sm:text-sm leading-relaxed" data-i18n="prob_2_desc">Fragmented
+                        information creates stress, missed deadlines, weak reporting, and slower decisions.</p>
+                </div>
+                <div class="p-6 sm:p-8 bg-white border border-slate-200 shadow-sm relative group hover:border-corporate-gold hover-pop"
+                    data-aos="fade-up" data-aos-delay="300">
+                    <div class="text-corporate-gold font-serif text-xl sm:text-2xl mb-3">03</div>
+                    <h3 class="font-semibold text-base sm:text-lg mb-2 text-corporate-charcoal"
+                        data-i18n="prob_3_title">Delayed Decisions</h3>
+                    <p class="text-slate-600 text-xs sm:text-sm leading-relaxed" data-i18n="prob_3_desc">Hard-to-read,
+                        disconnected data with no clear visibility into building health or forecasting.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: THE FIVE DIVISIONS -->
+    <section id="divisions" class="py-20 sm:py-24 bg-white border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16" data-aos="fade-up">
+                <span class="text-xs font-semibold uppercase tracking-[0.2em] text-corporate-gold mb-3 block"
+                    data-i18n="div_tag">Our Five Divisions</span>
+                <h2 class="font-serif text-2xl sm:text-4xl font-semibold mb-4 text-corporate-charcoal hover-pop cursor-default inline-block"
+                    data-i18n="div_title">One Partner. Five Integrated Disciplines.</h2>
+            </div>
+
+            <div class="space-y-6 sm:space-y-8">
+                <!-- Division 1 -->
+                <div class="p-6 sm:p-10 bg-corporate-charcoal text-corporate-lightgray rounded-none border-l-4 border-corporate-gold shadow-lg hover-pop"
+                    data-aos="fade-up">
+                    <div
+                        class="flex flex-col lg:flex-row lg:items-center justify-between mb-6 pb-6 border-b border-slate-700 gap-4">
+                        <div>
+                            <span class="text-corporate-gold font-serif text-xs tracking-widest block mb-1">DIVISION 01
+                                / 05</span>
+                            <h3 class="font-serif text-xl sm:text-2xl font-bold text-corporate-lightgray"
+                                data-i18n="div_1_name">Property Management</h3>
+                        </div>
+                        <span
+                            class="text-[11px] sm:text-xs uppercase tracking-wider bg-slate-800 text-corporate-gold px-3 py-1.5 border border-corporate-gold/30"
+                            data-i18n="div_1_sub">Hands-on management that protects your NOI</span>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
+                        <div class="p-4 bg-slate-800/60 border border-slate-700 hover-pop">
+                            <h4 class="font-semibold text-corporate-gold mb-2 text-xs sm:text-sm"
+                                data-i18n="div_1_col1_title">Tenant Relations</h4>
+                            <p class="text-slate-300 text-xs leading-relaxed" data-i18n="div_1_col1_desc">Full-service
+                                screening, onboarding, renewals, and retention.</p>
+                        </div>
+                        <div class="p-4 bg-slate-800/60 border border-slate-700 hover-pop">
+                            <h4 class="font-semibold text-corporate-gold mb-2 text-xs sm:text-sm"
+                                data-i18n="div_1_col2_title">Proactive Maintenance</h4>
+                            <p class="text-slate-300 text-xs leading-relaxed" data-i18n="div_1_col2_desc">Coordinated
+                                preventive and responsive maintenance.</p>
+                        </div>
+                        <div class="p-4 bg-slate-800/60 border border-slate-700 hover-pop">
+                            <h4 class="font-semibold text-corporate-gold mb-2 text-xs sm:text-sm"
+                                data-i18n="div_1_col3_title">Regulatory Compliance</h4>
+                            <p class="text-slate-300 text-xs leading-relaxed" data-i18n="div_1_col3_desc">Ongoing LTB
+                                and building-code compliance.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Division 2 -->
+                <div class="p-6 sm:p-10 bg-corporate-lightgray text-corporate-charcoal rounded-none border-l-4 border-corporate-charcoal shadow-sm hover-pop"
+                    data-aos="fade-up">
+                    <div
+                        class="flex flex-col lg:flex-row lg:items-center justify-between mb-6 pb-6 border-b border-slate-300 gap-4">
+                        <div>
+                            <span class="text-corporate-gold font-serif text-xs tracking-widest block mb-1">DIVISION 02
+                                / 05</span>
+                            <h3 class="font-serif text-xl sm:text-2xl font-bold text-corporate-charcoal"
+                                data-i18n="div_2_name">Bookkeeping & Financial Management</h3>
+                        </div>
+                        <span
+                            class="text-[11px] sm:text-xs uppercase tracking-wider bg-white text-corporate-charcoal px-3 py-1.5 border border-slate-300"
+                            data-i18n="div_2_sub">Numbers you can trust, delivered on time</span>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
+                        <div class="p-4 bg-white border border-slate-200 hover-pop">
+                            <h4 class="font-semibold text-corporate-charcoal mb-2 text-xs sm:text-sm"
+                                data-i18n="div_2_col1_title">Portfolio Reporting</h4>
+                            <p class="text-slate-600 text-xs leading-relaxed" data-i18n="div_2_col1_desc">Income
+                                statements, balance sheets, and custom reports.</p>
+                        </div>
+                        <div class="p-4 bg-white border border-slate-200 hover-pop">
+                            <h4 class="font-semibold text-corporate-charcoal mb-2 text-xs sm:text-sm"
+                                data-i18n="div_2_col2_title">Cash Flow Forecasting</h4>
+                            <p class="text-slate-600 text-xs leading-relaxed" data-i18n="div_2_col2_desc">
+                                Forward-looking projections and budget variance analysis.</p>
+                        </div>
+                        <div class="p-4 bg-white border border-slate-200 hover-pop">
+                            <h4 class="font-semibold text-corporate-charcoal mb-2 text-xs sm:text-sm"
+                                data-i18n="div_2_col3_title">Tax Preparation Support</h4>
+                            <p class="text-slate-600 text-xs leading-relaxed" data-i18n="div_2_col3_desc">Year-round,
+                                audit-ready documentation.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Division 3 -->
+                <div class="p-6 sm:p-10 bg-corporate-charcoal text-corporate-lightgray rounded-none border-l-4 border-corporate-gold shadow-lg hover-pop"
+                    data-aos="fade-up">
+                    <div
+                        class="flex flex-col lg:flex-row lg:items-center justify-between mb-6 pb-6 border-b border-slate-700 gap-4">
+                        <div>
+                            <span class="text-corporate-gold font-serif text-xs tracking-widest block mb-1">DIVISION 03
+                                / 05</span>
+                            <h3 class="font-serif text-xl sm:text-2xl font-bold text-corporate-lightgray"
+                                data-i18n="div_3_name">Property Development</h3>
+                        </div>
+                        <span
+                            class="text-[11px] sm:text-xs uppercase tracking-wider bg-slate-800 text-corporate-gold px-3 py-1.5 border border-corporate-gold/30"
+                            data-i18n="div_3_sub">From concept to completion</span>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
+                        <div class="p-4 bg-slate-800/60 border border-slate-700 hover-pop">
+                            <h4 class="font-semibold text-corporate-gold mb-2 text-xs sm:text-sm"
+                                data-i18n="div_3_col1_title">Feasibility Analysis</h4>
+                            <p class="text-slate-300 text-xs leading-relaxed" data-i18n="div_3_col1_desc">
+                                Highest-and-best-use studies before capital is committed.</p>
+                        </div>
+                        <div class="p-4 bg-slate-800/60 border border-slate-700 hover-pop">
+                            <h4 class="font-semibold text-corporate-gold mb-2 text-xs sm:text-sm"
+                                data-i18n="div_3_col2_title">Project Planning</h4>
+                            <p class="text-slate-300 text-xs leading-relaxed" data-i18n="div_3_col2_desc">End-to-end
+                                planning through municipal approvals.</p>
+                        </div>
+                        <div class="p-4 bg-slate-800/60 border border-slate-700 hover-pop">
+                            <h4 class="font-semibold text-corporate-gold mb-2 text-xs sm:text-sm"
+                                data-i18n="div_3_col3_title">Completion Transition</h4>
+                            <p class="text-slate-300 text-xs leading-relaxed" data-i18n="div_3_col3_desc">Seamless
+                                handoff into ongoing management.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Division 4 -->
+                <div class="p-6 sm:p-10 bg-corporate-lightgray text-corporate-charcoal rounded-none border-l-4 border-corporate-charcoal shadow-sm hover-pop"
+                    data-aos="fade-up">
+                    <div
+                        class="flex flex-col lg:flex-row lg:items-center justify-between mb-6 pb-6 border-b border-slate-300 gap-4">
+                        <div>
+                            <span class="text-corporate-gold font-serif text-xs tracking-widest block mb-1">DIVISION 04
+                                / 05</span>
+                            <h3 class="font-serif text-xl sm:text-2xl font-bold text-corporate-charcoal"
+                                data-i18n="div_4_name">Architectural Services</h3>
+                        </div>
+                        <span
+                            class="text-[11px] sm:text-xs uppercase tracking-wider bg-white text-corporate-charcoal px-3 py-1.5 border border-slate-300"
+                            data-i18n="div_4_sub">Design that maximizes return</span>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
+                        <div class="p-4 bg-white border border-slate-200 hover-pop">
+                            <h4 class="font-semibold text-corporate-charcoal mb-2 text-xs sm:text-sm"
+                                data-i18n="div_4_col1_title">Concept Design</h4>
+                            <p class="text-slate-600 text-xs leading-relaxed" data-i18n="div_4_col1_desc">
+                                Market-informed design concepts aligned with zoning.</p>
+                        </div>
+                        <div class="p-4 bg-white border border-slate-200 hover-pop">
+                            <h4 class="font-semibold text-corporate-charcoal mb-2 text-xs sm:text-sm"
+                                data-i18n="div_4_col2_title">Site Planning</h4>
+                            <p class="text-slate-600 text-xs leading-relaxed" data-i18n="div_4_col2_desc">Optimized
+                                layouts maximizing density and ROI.</p>
+                        </div>
+                        <div class="p-4 bg-white border border-slate-200 hover-pop">
+                            <h4 class="font-semibold text-corporate-charcoal mb-2 text-xs sm:text-sm"
+                                data-i18n="div_4_col3_title">Permit Drawings</h4>
+                            <p class="text-slate-600 text-xs leading-relaxed" data-i18n="div_4_col3_desc">
+                                Construction-ready documentation.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Division 5 -->
+                <div class="p-6 sm:p-10 bg-corporate-charcoal text-corporate-lightgray rounded-none border-l-4 border-corporate-gold shadow-lg hover-pop"
+                    data-aos="fade-up">
+                    <div
+                        class="flex flex-col lg:flex-row lg:items-center justify-between mb-6 pb-6 border-b border-slate-700 gap-4">
+                        <div>
+                            <span class="text-corporate-gold font-serif text-xs tracking-widest block mb-1">DIVISION 05
+                                / 05</span>
+                            <h3 class="font-serif text-xl sm:text-2xl font-bold text-corporate-lightgray"
+                                data-i18n="div_5_name">Asset Management</h3>
+                        </div>
+                        <span
+                            class="text-[11px] sm:text-xs uppercase tracking-wider bg-slate-800 text-corporate-gold px-3 py-1.5 border border-corporate-gold/30"
+                            data-i18n="div_5_sub">Strategic guidance at every stage</span>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
+                        <div class="p-4 bg-slate-800/60 border border-slate-700 hover-pop">
+                            <h4 class="font-semibold text-corporate-gold mb-2 text-xs sm:text-sm"
+                                data-i18n="div_5_col1_title">Performance Reviews</h4>
+                            <p class="text-slate-300 text-xs leading-relaxed" data-i18n="div_5_col1_desc">In-depth
+                                analysis to unlock property value.</p>
+                        </div>
+                        <div class="p-4 bg-slate-800/60 border border-slate-700 hover-pop">
+                            <h4 class="font-semibold text-corporate-gold mb-2 text-xs sm:text-sm"
+                                data-i18n="div_5_col2_title">Acquisition Analysis</h4>
+                            <p class="text-slate-300 text-xs leading-relaxed" data-i18n="div_5_col2_desc">Financial
+                                modeling and market comparables.</p>
+                        </div>
+                        <div class="p-4 bg-slate-800/60 border border-slate-700 hover-pop">
+                            <h4 class="font-semibold text-corporate-gold mb-2 text-xs sm:text-sm"
+                                data-i18n="div_5_col3_title">Exit Strategy</h4>
+                            <p class="text-slate-300 text-xs leading-relaxed" data-i18n="div_5_col3_desc">Strategic
+                                disposition planning.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: REAL-WORLD PROJECT PORTFOLIO (Placed After Divisions) -->
+    <section id="portfolio" class="py-20 bg-corporate-lightgray border-t border-slate-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 mb-12 text-center">
+            <span class="text-xs font-semibold uppercase tracking-[0.2em] text-corporate-gold mb-2 block"
+                data-i18n="port_tag">Real-World Execution</span>
+            <h2 class="font-serif text-3xl sm:text-4xl font-semibold text-corporate-charcoal hover-pop cursor-default inline-block"
+                data-i18n="port_title">Real-World Project Gallery</h2>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div
+                class="bg-corporate-charcoal rounded-lg overflow-hidden shadow-xl border border-slate-200 group hover-pop">
+                <div class="h-[300px] sm:h-[400px] overflow-hidden">
+                    <img src="irl-bathroom.jpg" alt="Bathroom"
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                </div>
+                <div class="p-6 text-corporate-lightgray">
+                    <span class="text-xs text-corporate-gold uppercase tracking-widest block mb-1"
+                        data-i18n="bath_tag">Residential Renovation</span>
+                    <h3 class="font-serif text-xl font-bold" data-i18n="bath_title">Luxury Marble & Matte Black Bathroom
+                        Suite</h3>
+                    <p class="text-slate-400 text-xs sm:text-sm mt-2" data-i18n="bath_desc">Fully coordinated bathroom
+                        turnaround featuring custom tilework, LED vanity mirror, and premium fixtures.</p>
+                </div>
+            </div>
+            <div
+                class="bg-corporate-charcoal rounded-lg overflow-hidden shadow-xl border border-slate-200 group hover-pop">
+                <div class="h-[300px] sm:h-[400px] overflow-hidden">
+                    <img src="irl-kitchen.jpg" alt="Kitchen"
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                </div>
+                <div class="p-6 text-corporate-lightgray">
+                    <span class="text-xs text-corporate-gold uppercase tracking-widest block mb-1"
+                        data-i18n="kit_tag">Property Development</span>
+                    <h3 class="font-serif text-xl font-bold" data-i18n="kit_title">Open-Concept Contemporary Kitchen
+                    </h3>
+                    <p class="text-slate-400 text-xs sm:text-sm mt-2" data-i18n="kit_desc">End-to-end management from
+                        architectural layout to final finishes, maximizing property valuation and tenant appeal.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 5: WHY US -->
+    <section id="why-us" class="py-20 sm:py-24 bg-corporate-charcoal text-corporate-lightgray">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16" data-aos="fade-up">
+                <span class="text-xs font-semibold uppercase tracking-[0.2em] text-corporate-gold mb-3 block"
+                    data-i18n="why_tag">Why Choose Khouri Solutions</span>
+                <h2 class="font-serif text-2xl sm:text-4xl font-semibold mb-4 text-corporate-lightgray hover-pop cursor-default inline-block"
+                    data-i18n="why_title">One Partner. Every Discipline. Measurable Results.</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12">
+                <div class="p-6 sm:p-8 bg-slate-800/50 border border-slate-700 hover-pop" data-aos="fade-up">
+                    <h3 class="font-serif text-base sm:text-lg font-semibold text-corporate-gold mb-2"
+                        data-i18n="why_1_title">One Integrated Partner</h3>
+                    <p class="text-slate-300 text-xs sm:text-sm leading-relaxed" data-i18n="why_1_desc">Replace multiple
+                        vendors with a single firm coordinating operations, finance, development, and strategy.</p>
+                </div>
+                <div class="p-6 sm:p-8 bg-slate-800/50 border border-slate-700 hover-pop" data-aos="fade-up"
+                    data-aos-delay="100">
+                    <h3 class="font-serif text-base sm:text-lg font-semibold text-corporate-gold mb-2"
+                        data-i18n="why_2_title">Cross-Discipline Expertise</h3>
+                    <p class="text-slate-300 text-xs sm:text-sm leading-relaxed" data-i18n="why_2_desc">Every team
+                        member understands how their work connects to the broader portfolio strategy.</p>
+                </div>
+                <div class="p-6 sm:p-8 bg-slate-800/50 border border-slate-700 hover-pop" data-aos="fade-up"
+                    data-aos-delay="200">
+                    <h3 class="font-serif text-base sm:text-lg font-semibold text-corporate-gold mb-2"
+                        data-i18n="why_3_title">Transparent Communication</h3>
+                    <p class="text-slate-300 text-xs sm:text-sm leading-relaxed" data-i18n="why_3_desc">Regular
+                        reporting, clear accountability, and direct access to decision-makers at every level.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 6: CONTACT -->
+    <section id="contact" class="py-20 sm:py-24 bg-corporate-lightgray border-t border-slate-300">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center" data-aos="fade-up">
+            <span class="text-xs font-semibold uppercase tracking-[0.3em] text-corporate-gold mb-3 block"
+                data-i18n="contact_tag">Let's Connect</span>
+            <h2 class="font-serif text-2xl sm:text-5xl font-bold mb-4 sm:mb-6 text-corporate-charcoal hover-pop cursor-default inline-block"
+                data-i18n="contact_title">We are your integrated growth partner.</h2>
+            <div class="p-8 sm:p-12 bg-white border border-slate-200 text-center rounded-none shadow-xl hover-pop">
+                <span class="text-[10px] sm:text-xs uppercase tracking-[0.2em] text-slate-500 font-semibold block mb-3"
+                    data-i18n="contact_sub">Direct Inquiries & Portfolios</span>
+                <a href="mailto:Khourisolutionsinc@gmail.com"
+                    class="font-serif text-lg sm:text-2xl md:text-3xl lg:text-4xl font-bold text-corporate-charcoal hover:text-corporate-gold transition-colors tracking-wide underline decoration-corporate-gold/40 underline-offset-8 break-all">
+                    Khourisolutionsinc@gmail.com
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-10 bg-corporate-charcoal text-center text-xs sm:text-sm text-slate-400 border-t border-slate-800">
+        <p>&copy; 2026 Khouri Solutions Inc. All rights reserved. A Property Partner Business.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
