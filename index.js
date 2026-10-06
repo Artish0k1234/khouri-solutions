@@ -8,14 +8,23 @@ const menuBtn = document.getElementById('menu-btn');
 const mobileMenu = document.getElementById('mobile-menu');
 const mobileLinks = document.querySelectorAll('.mobile-link');
 
-menuBtn.addEventListener('click', () => {
+menuBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
     mobileMenu.classList.toggle('hidden');
 });
 
+// Close mobile menu when clicking any category link
 mobileLinks.forEach(link => {
     link.addEventListener('click', () => {
         mobileMenu.classList.add('hidden');
     });
+});
+
+// Close menu when clicking anywhere outside of it
+document.addEventListener('click', (e) => {
+    if (!mobileMenu.contains(e.target) && !menuBtn.contains(e.target)) {
+        mobileMenu.classList.add('hidden');
+    }
 });
 
 // Hero Video Ending Trigger
