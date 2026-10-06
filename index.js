@@ -3,6 +3,21 @@ AOS.init({
     duration: 800,
 });
 
+// Mobile Hamburger Menu Toggle Logic
+const menuBtn = document.getElementById('menu-btn');
+const mobileMenu = document.getElementById('mobile-menu');
+const mobileLinks = document.querySelectorAll('.mobile-link');
+
+menuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+});
+
+mobileLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+    });
+});
+
 // Hero Video Ending Trigger
 const heroSection = document.getElementById('hero-section');
 const video = document.getElementById('hero-video');
@@ -77,7 +92,7 @@ carouselContainer.addEventListener('mouseenter', () => clearInterval(slideInterv
 carouselContainer.addEventListener('mouseleave', startTimer);
 startTimer();
 
-// Multi-Language Switcher Dictionary
+// Multi-Language Switcher Dictionary (English & French)
 const translations = {
     en: {
         nav_home: "Home",
@@ -106,14 +121,67 @@ const translations = {
         prob_3_desc: "Hard-to-read, disconnected data with no clear visibility into building health or forecasting.",
         div_tag: "Our Five Divisions",
         div_title: "One Partner. Five Integrated Disciplines.",
+        div_1_name: "Property Management",
+        div_1_sub: "Hands-on management that protects your NOI",
+        div_1_col1_title: "Tenant Relations",
+        div_1_col1_desc: "Full-service screening, onboarding, renewals, and retention.",
+        div_1_col2_title: "Proactive Maintenance",
+        div_1_col2_desc: "Coordinated preventive and responsive maintenance.",
+        div_1_col3_title: "Regulatory Compliance",
+        div_1_col3_desc: "Ongoing LTB and building-code compliance.",
+        div_2_name: "Bookkeeping & Financial Management",
+        div_2_sub: "Numbers you can trust, delivered on time",
+        div_2_col1_title: "Portfolio Reporting",
+        div_2_col1_desc: "Income statements, balance sheets, and custom reports.",
+        div_2_col2_title: "Cash Flow Forecasting",
+        div_2_col2_desc: "Forward-looking projections and budget variance analysis.",
+        div_2_col3_title: "Tax Preparation Support",
+        div_2_col3_desc: "Year-round, audit-ready documentation.",
+        div_3_name: "Property Development",
+        div_3_sub: "From concept to completion",
+        div_3_col1_title: "Feasibility Analysis",
+        div_3_col1_desc: "Highest-and-best-use studies before capital is committed.",
+        div_3_col2_title: "Project Planning",
+        div_3_col2_desc: "End-to-end planning through municipal approvals.",
+        div_3_col3_title: "Completion Transition",
+        div_3_col3_desc: "Seamless handoff into ongoing management.",
+        div_4_name: "Architectural Services",
+        div_4_sub: "Design that maximizes return",
+        div_4_col1_title: "Concept Design",
+        div_4_col1_desc: "Market-informed design concepts aligned with zoning.",
+        div_4_col2_title: "Site Planning",
+        div_4_col2_desc: "Optimized layouts maximizing density and ROI.",
+        div_4_col3_title: "Permit Drawings",
+        div_4_col3_desc: "Construction-ready documentation.",
+        div_5_name: "Asset Management",
+        div_5_sub: "Strategic guidance at every stage",
+        div_5_col1_title: "Performance Reviews",
+        div_5_col1_desc: "In-depth analysis to unlock property value.",
+        div_5_col2_title: "Acquisition Analysis",
+        div_5_col2_desc: "Financial modeling and market comparables.",
+        div_5_col3_title: "Exit Strategy",
+        div_5_col3_desc: "Strategic disposition planning.",
         port_tag: "Real-World Execution",
         port_title: "Real-World Project Gallery",
         bath_tag: "Residential Renovation",
         bath_title: "Luxury Marble & Matte Black Bathroom Suite",
+        bath_desc: "Fully coordinated bathroom turnaround featuring custom tilework, LED vanity mirror, and premium fixtures.",
         kit_tag: "Property Development",
         kit_title: "Open-Concept Contemporary Kitchen",
+        kit_desc: "End-to-end management from architectural layout to final finishes, maximizing property valuation and tenant appeal.",
+        why_tag: "Why Choose Khouri Solutions",
+        why_title: "One Partner. Every Discipline. Measurable Results.",
+        why_1_title: "One Integrated Partner",
+        why_1_desc: "Replace multiple vendors with a single firm coordinating operations, finance, development, and strategy.",
+        why_2_title: "Cross-Discipline Expertise",
+        why_2_desc: "Every team member understands how their work connects to the broader portfolio strategy.",
+        why_3_title: "Transparent Communication",
+        why_3_desc: "Regular reporting, clear accountability, and direct access to decision-makers at every level.",
         contact_tag: "Let's Connect",
-        contact_title: "We are your integrated growth partner."
+        contact_title: "We are your integrated growth partner.",
+        contact_desc: "Building Value. Creating Growth. Delivering Results. Let's discuss how we can support your portfolio.",
+        contact_sub: "Direct Inquiries & Portfolios",
+        contact_location: "Montréal, Québec • Available for Residential & Commercial Portfolios"
     },
     fr: {
         nav_home: "Accueil",
@@ -142,14 +210,67 @@ const translations = {
         prob_3_desc: "Des données difficiles à lire et déconnectées sans visibilité claire sur la santé des bâtiments.",
         div_tag: "Nos Cinq Divisions",
         div_title: "Un Partenaire. Cinq Disciplines Intégrées.",
+        div_1_name: "Gestion Immobilière",
+        div_1_sub: "Gestion proactive qui protège votre NOI",
+        div_1_col1_title: "Relations Locataires",
+        div_1_col1_desc: "Sélection complète, intégration, renouvellements et rétention.",
+        div_1_col2_title: "Maintenance Proactive",
+        div_1_col2_desc: "Entretien préventif et réactif coordonné.",
+        div_1_col3_title: "Conformité Réglementaire",
+        div_1_col3_desc: "Conformité continue TAL et codes du bâtiment.",
+        div_2_name: "Tenue de Livres & Gestion Financière",
+        div_2_sub: "Des chiffres fiables livrés à temps",
+        div_2_col1_title: "Rapports de Portfolio",
+        div_2_col1_desc: "États des résultats, bilans et rapports personnalisés.",
+        div_2_col2_title: "Prévisions de Trésorerie",
+        div_2_col2_desc: "Projections d'avenir et analyse des écarts budgétaires.",
+        div_2_col3_title: "Support Fiscal",
+        div_2_col3_desc: "Documentation prête pour les audits toute l'année.",
+        div_3_name: "Développement Immobilier",
+        div_3_sub: "De la conception à la réalisation",
+        div_3_col1_title: "Analyse de Faisabilité",
+        div_3_col1_desc: "Études de meilleur usage avant l'engagement des capitaux.",
+        div_3_col2_title: "Planification de Projet",
+        div_3_col2_desc: "Planification complète jusqu'aux approbations.",
+        div_3_col3_title: "Transition de Fin",
+        div_3_col3_desc: "Passage fluide vers la gestion continue.",
+        div_4_name: "Services Architecturaux",
+        div_4_sub: "Design maximisant le rendement",
+        div_4_col1_title: "Design Conceptuel",
+        div_4_col1_desc: "Concepts informés par le marché et le zonage.",
+        div_4_col2_title: "Planification d'Implantation",
+        div_4_col2_desc: "Agencements optimisant la densité et le ROI.",
+        div_4_col3_title: "Plans de Permis",
+        div_4_col3_desc: "Documentation prête pour la construction.",
+        div_5_name: "Gestion d'Actifs",
+        div_5_sub: "Conseil stratégique à chaque étape",
+        div_5_col1_title: "Revues de Performance",
+        div_5_col1_desc: "Analyses approfondies pour libérer la valeur.",
+        div_5_col2_title: "Analyse d'Acquisition",
+        div_5_col2_desc: "Modélisation financière et comparables du marché.",
+        div_5_col3_title: "Stratégie de Sortie",
+        div_5_col3_desc: "Planification stratégique de disposition.",
         port_tag: "Réalisation Concrète",
         port_title: "Galerie de Projets Réels",
         bath_tag: "Rénovation Résidentielle",
         bath_title: "Salle de Bain Luxe en Marbre & Noir Mat",
+        bath_desc: "Rénovation complète avec carrelage sur mesure, miroir LED et accessoires haut de gamme.",
         kit_tag: "Développement Immobilier",
         kit_title: "Cuisine Contemporaine à Aire Ouverte",
+        kit_desc: "Gestion de bout en bout maximisant la valorisation et l'attrait pour les locataires.",
+        why_tag: "Pourquoi Choisir Khouri Solutions",
+        why_title: "Un Partenaire. Chaque Discipline. Résultats Mesurables.",
+        why_1_title: "Un Partenaire Intégré",
+        why_1_desc: "Remplacez plusieurs fournisseurs par une seule firme coordonnant opérations, finance et stratégie.",
+        why_2_title: "Expertise Multidisciplinaire",
+        why_2_desc: "Chaque membre comprend comment son travail s'intègre à la stratégie globale.",
+        why_3_title: "Communication Transparente",
+        why_3_desc: "Rapports réguliers, responsabilité claire et accès direct aux décideurs.",
         contact_tag: "Connectons-nous",
-        contact_title: "Nous sommes votre partenaire de croissance intégré."
+        contact_title: "Nous sommes votre partenaire de croissance intégré.",
+        contact_desc: "Créer de la valeur. Stimuler la croissance. Obtenir des résultats. Discutons de votre portfolio.",
+        contact_sub: "Demandes Directes & Portfolios",
+        contact_location: "Montréal, Québec • Disponible pour Portfolios Résidentiels & Commerciaux"
     }
 };
 
