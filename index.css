@@ -11,14 +11,12 @@
     display: inline-block;
     text-align: center;
 }
-
 .btn-primary:hover {
     background-color: transparent;
     color: #C5A059;
     transform: translateY(-2px);
     box-shadow: 0 10px 30px rgba(197, 160, 89, 0.15);
 }
-
 .btn-outline {
     background-color: transparent;
     color: #F4F4F4;
@@ -32,7 +30,6 @@
     display: inline-block;
     text-align: center;
 }
-
 .btn-outline:hover {
     border-color: #C5A059;
     color: #C5A059;
@@ -42,7 +39,6 @@
 .hover-pop {
     transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
 }
-
 .hover-pop:hover {
     transform: translateY(-4px);
     box-shadow: 0 12px 25px -5px rgba(0, 0, 0, 0.2);
@@ -57,17 +53,14 @@
 #hero-section {
     position: relative;
 }
-
 #hero-video {
     opacity: 1;
     transition: opacity 1s ease-in-out;
 }
-
 #hero-bg-solid {
     opacity: 0;
     transition: opacity 1s ease-in-out;
 }
-
 #hero-text-overlay {
     opacity: 0;
     transform: translateY(10px);
@@ -80,11 +73,9 @@
     visibility: hidden;
     pointer-events: none;
 }
-
 .show-ending #hero-bg-solid {
     opacity: 1;
 }
-
 .show-ending #hero-text-overlay {
     opacity: 1;
     transform: translateY(0);
@@ -95,11 +86,9 @@
     #hero-video {
         display: none !important;
     }
-
     #hero-bg-solid {
         opacity: 1 !important;
     }
-
     #hero-text-overlay {
         opacity: 1 !important;
         transform: translateY(0) !important;
